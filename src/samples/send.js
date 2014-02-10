@@ -2,7 +2,7 @@ var diffusion = require('DiffusionClient');
 
 var connectionDetails = {
     host : 'localhost',
-    port : 8080,
+    port : 8080
 };
 
 var callbacks = {
@@ -24,11 +24,6 @@ var callbacks = {
         console.log('[' + message.getHeaders() + "] "
                     + message.getBody());
     }
-};
-
-
-var onAssetsListener = function(message) {
-    console.log('Got echo message');
 };
 
 var c1 = diffusion.createClient(callbacks);
